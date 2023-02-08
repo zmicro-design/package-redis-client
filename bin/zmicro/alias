@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PACKAGE_NAME="redis-cli"
+export PACKAGE_NAME="redis-client"
 import "$ZMICRO_PACKAGES_PATH/$PACKAGE_NAME/config"
 import "$ZMICRO_PACKAGES_PATH/$PACKAGE_NAME/core"
 
@@ -14,19 +14,19 @@ fi
 
 help() {
   echo "Usage:"
-  echo "  zmicro redis-cli <args ...>"
+  echo "  zmicro redis-client <args ...>"
   echo ""
 
-  redis-cli --help
+  rdcli --help
 }
 
 version() {
-  redis-cli --version
+  rdcli --version
 }
 
 core() {
   # context directory
-  local context="$ZMICRO_PACKAGES_DATA_PATH/redis-cli"
+  local context="$ZMICRO_PACKAGES_DATA_PATH/redis-client"
   if [ ! -d "$context" ]; then
     mkdir -p $context
   fi
@@ -41,7 +41,7 @@ core() {
     version
     ;;
   *)
-    redis-cli "$@"
+    rdcli "$@"
     ;;
   esac
 }

@@ -25,7 +25,7 @@ install() {
 
   # install
   log::info "[$(timestamp)][package][$name] installing ..."
-  pm::npm i -g create-dmg
+  pm::npm i -g redis-cli
 
   # clean
   log::info "[$(timestamp)][package][$name] cleaning ..."
