@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export PACKAGE_CORE_NAME="redis-cli"
+export PACKAGE_CORE_BIN_NAME="$PACKAGE_CORE_NAME"
+export PACKAGE_CORE_VERSION=v2.1.7
+export PACKAGE_CORE_ORG="lujiajing1126"
+
+export PACKAGE_CORE_RELEASE_DOWNLOAD="https://github.com/${PACKAGE_CORE_ORG}/redis-cli/releases/download"
